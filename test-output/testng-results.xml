@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="0" failed="3" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2020-08-22T11:55:25 EDT" name="Smoke Test Suite" finished-at="2020-08-22T11:57:14 EDT" duration-ms="108511">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.noorteck.qa.runners.SmokeTestRunner@73700b80]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2020-08-22T11:55:25 EDT" name="Add Functionality" finished-at="2020-08-22T11:57:14 EDT" duration-ms="108511">
+      <class name="com.noorteck.qa.runners.SmokeTestRunner">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:com.noorteck.qa.runners.SmokeTestRunner@73700b80]" started-at="2020-08-22T11:55:25 EDT" name="setUpClass" finished-at="2020-08-22T11:55:26 EDT" duration-ms="1081" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.noorteck.qa.runners.SmokeTestRunner@73700b80]" started-at="2020-08-22T11:55:26 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-08-22T11:56:23 EDT" duration-ms="57027" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verifying the user acount name"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Dashboard page Feature]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Element does not exits, it is not displayed: Proxy element for: DefaultElementLocator 'By.xpath: //*[contains(text(),'Successfully')]' expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Element does not exits, it is not displayed: Proxy element for: DefaultElementLocator 'By.xpath: //*[contains(text(),'Successfully')]' expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:97)
+at org.testng.Assert.failNotEquals(Assert.java:969)
+at org.testng.Assert.assertTrue(Assert.java:43)
+at com.noorteck.qa.utils.CommonUI.isDisplayed(CommonUI.java:91)
+at com.noorteck.qa.utils.CommonUI.getText(CommonUI.java:162)
+at com.noorteck.qa.pages.JobTitlesPage.getSuccessMessage(JobTitlesPage.java:84)
+at com.noorteck.qa.steps.JobTitlesStepDefinition.system_displays_successfuly_message(JobTitlesStepDefinition.java:46)
+at ✽.System displays successfuly message "Successfully Saved"(file:///C:/Users/dennn/Desktop/noorteck-bdd/src/test/resources/ntk360/JobTitles.feature:10)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.noorteck.qa.runners.SmokeTestRunner@73700b80]" started-at="2020-08-22T11:56:23 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-08-22T11:56:38 EDT" duration-ms="14658" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify employee username"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[User Page Feature]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchWindowException">
+            <message>
+              <![CDATA[no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=84.0.4147.135)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-2N6ADQC', ip: '192.168.0.210', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '9.0.4'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.135, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\Users\dennn\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:59698}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 1b330cd4d2c08efdac7f03f686f35613
+*** Element info: {Using=xpath, value=//span[contains(text(),'Admin')]}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=84.0.4147.135)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-2N6ADQC', ip: '192.168.0.210', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '9.0.4'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.135, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\Users\dennn\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:59698}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 1b330cd4d2c08efdac7f03f686f35613
+*** Element info: {Using=xpath, value=//span[contains(text(),'Admin')]}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:488)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at com.sun.proxy.$Proxy27.toString(Unknown Source)
+at java.base/java.lang.String.valueOf(String.java:2801)
+at java.base/java.lang.StringBuilder.append(StringBuilder.java:135)
+at com.noorteck.qa.utils.CommonUI.isDisplayed(CommonUI.java:91)
+at com.noorteck.qa.utils.CommonUI.click(CommonUI.java:146)
+at com.noorteck.qa.pages.JobTitlesPage.clickAdminMenu(JobTitlesPage.java:52)
+at com.noorteck.qa.pages.UsersPage.clickUsersMenu(UsersPage.java:31)
+at com.noorteck.qa.steps.UsersStepDefinition.user_navigates_to_users_page(UsersStepDefinition.java:19)
+at ✽.User navigates to Users page(file:///C:/Users/dennn/Desktop/noorteck-bdd/src/test/resources/ntk360/SmokeTest.feature:8)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.noorteck.qa.runners.SmokeTestRunner@73700b80]" started-at="2020-08-22T11:56:38 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-08-22T11:57:13 EDT" duration-ms="35461" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify pending timesheet icon is displayed"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[User Page Feature]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Element does not exits, it is not displayed: Proxy element for: DefaultElementLocator 'By.id: txtUsername' expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Element does not exits, it is not displayed: Proxy element for: DefaultElementLocator 'By.id: txtUsername' expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:97)
+at org.testng.Assert.failNotEquals(Assert.java:969)
+at org.testng.Assert.assertTrue(Assert.java:43)
+at com.noorteck.qa.utils.CommonUI.isDisplayed(CommonUI.java:91)
+at com.noorteck.qa.utils.CommonUI.enter(CommonUI.java:294)
+at com.noorteck.qa.pages.LoginPage.enterUserName(LoginPage.java:32)
+at com.noorteck.qa.steps.LoginStepDefinition.enterCredentials(LoginStepDefinition.java:20)
+at ✽.User enters valid credentials(file:///C:/Users/dennn/Desktop/noorteck-bdd/src/test/resources/ntk360/SmokeTest.feature:22)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.noorteck.qa.runners.SmokeTestRunner@73700b80]" started-at="2020-08-22T11:57:13 EDT" name="tearDownClass" finished-at="2020-08-22T11:57:14 EDT" duration-ms="202" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.noorteck.qa.runners.SmokeTestRunner -->
+    </test> <!-- Add Functionality -->
+  </suite> <!-- Smoke Test Suite -->
+</testng-results>
